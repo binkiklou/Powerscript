@@ -1,3 +1,5 @@
+> This is kinda outated
+
 # Powerscript code documentation
 This is not the documentation for the language but for the language's source
 
