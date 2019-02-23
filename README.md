@@ -10,7 +10,7 @@ Building on linux is pretty easy, you can use the standard ide approach or use o
 #### G++
 It's on pretty much every linux distro 
 ```sh
-cd Powerscript
+cd Powerscript/build
 sh build/g++.sh
 ```
 ## Mac OS
