@@ -34,7 +34,7 @@ namespace Log
 				SetConsoleTextAttribute(hcon, 07);
 				std::cout << txt << std::endl;
 #elif OsCode == 3 // Linux
-			std::cout << "\x1B[33m" << "Debug:" << "\x1B[0m" << std::endl;
+			std::cout << "\x1B[33m" << "Debug:" << txt << "\x1B[0m" << std::endl;
 #endif
 		}
 	}
@@ -47,7 +47,7 @@ namespace Log
 			SetConsoleTextAttribute(hcon, 07);
 			std::cout << txt << std::endl;
 #elif OsCode == 3 // Linux
-		std::cout << "\x1B[34m" << "Debug:" << "\x1B[0m" << std::endl;
+		std::cout << "\x1B[34m" << "Debug:" << txt << "\x1B[0m" << std::endl;
 #endif
 	}
 	void Error(std::string txt)
@@ -59,7 +59,7 @@ namespace Log
 			SetConsoleTextAttribute(hcon, 07);
 			std::cout << txt << std::endl;
 #elif OsCode == 3 // Linux
-		std::cout << "\x1B[31m" << "Debug:" << "\x1B[0m" << std::endl;
+		std::cout << "\x1B[31m" << "Debug:" << txt << "\x1B[0m" << std::endl;
 #endif
 	}
 }
