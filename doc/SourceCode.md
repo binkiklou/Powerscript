@@ -132,6 +132,7 @@ Statement(
 ---
 #### Type ``int``
 This is the type of the statement
+
 | Statement | Code |
 |--|--|
 | Invalid | 0 |
