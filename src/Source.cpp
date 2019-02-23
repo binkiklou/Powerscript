@@ -5,54 +5,12 @@
 
 #include <iostream>
 
-void RunCommand(std::string txt) // That is some really bad code
-{
-	int Position = 0;
-	std::string arg;
-
-	bool DebugFlag = false;
-
-	for (char &c : txt)
-	{
-		Position++;
-		if (isspace(c))
-		{
-			
-			arg.erase();
-		}
-		else
-		{
-			arg.append(1, c);
-
-			if (arg.compare("Debug_Mode"))
-			{
-				DebugFlag = true;
-			}
-			if (DebugFlag == true && arg.compare("true") == 0)
-			{
-				Powerscript::Debug_Mode = true;
-			}
-			if (Position >= txt.length())
-			{
-				
-				arg.erase();
-			}
-		}
-	//	if (CPos >= txt.length())
-	}
-}
-
-int main()
+int main(int argc, char *argv[])
 {
 	std::cout << "PowerScript Interpreter Version "<< PSVersion << std::endl;
 	std::cout << "Build of " << __TIMESTAMP__ << " for " << OsString << std::endl;
-	std::cout << "Preprocessing commands(can only be done once by terminal):" << std::endl;
 
 	Powerscript::Env Environement;
-
-	std::string cmd;
-	std::getline(std::cin, cmd);
-	RunCommand(cmd);
 	
 	if (Powerscript::Debug_Mode == true)
 	{
@@ -62,7 +20,7 @@ int main()
 	while (true)
 	{
 		std::string input;
-		std::cout << ">>>";
+		std::cout << ">";
 		std::getline(std::cin, input);
 		Environement.Add(input);
 		Environement.Run();
@@ -70,3 +28,32 @@ int main()
 
 	return 0;
 }
+
+/*
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+int main ( int argc, char *argv[] )
+{
+  if ( argc != 2 ) // argc should be 2 for correct execution
+	// We print argv[0] assuming it is the program name
+	cout<<"usage: "<< argv[0] <<" <filename>\n";
+  else {
+	// We assume argv[1] is a filename to open
+	ifstream the_file ( argv[1] );
+	// Always check to see if file opening succeeded
+	if ( !the_file.is_open() )
+	  cout<<"Could not open file\n";
+	else {
+	  char x;
+	  // the_file.get ( x ) returns false if the end of the file
+	  //  is reached or an error occurs
+	  while ( the_file.get ( x ) )
+		cout<< x;
+	}
+	// the_file is closed implicitly here
+  }
+}
+*/

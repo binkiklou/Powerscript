@@ -4,7 +4,7 @@
 #include "Function.h"
 //No Loop.h
 
-#define PSVersion "0.0.9"
+#define PSVersion "0.1.0"
 
 namespace Powerscript
 {
