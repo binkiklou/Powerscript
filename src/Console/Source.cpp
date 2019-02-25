@@ -4,8 +4,9 @@
 #include "../Console/Log.h"
 
 #include <iostream>
+#include <ctime>
 
-int main(int argc, char *argv[])
+int main()
 {
 	std::cout << "PowerScript Interpreter Version "<< PSVersion << std::endl;
 	std::cout << "Build of " << __TIMESTAMP__ << " for " << OsString << std::endl;
@@ -16,6 +17,7 @@ int main(int argc, char *argv[])
 	{
 		Log::Debug("Activated");
 	}
+	
 
 	while (true)
 	{
