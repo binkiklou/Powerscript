@@ -78,7 +78,11 @@ namespace Powerscript
 	void Env::Analyze()
 	{
 		int WPos = -1;
-		int CScope = 0;
+
+		Scope CScope; // Current Scope
+		CScope.x = 0;
+		CScope.y = 0;
+		CScope.p = 0;
 
 		//std::vector<std::string> CList; // Current Word List
 		std::string Word;

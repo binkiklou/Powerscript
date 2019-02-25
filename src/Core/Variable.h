@@ -1,4 +1,5 @@
 #pragma once
+#include "Scope.h"
 
 #include <string>
 #include <vector>
@@ -24,7 +25,6 @@ class Variable
 public:
 //	Variable();
 	std::string Name;
-	int Scope;
 	Value CValue; // Current Value
-//	void GetType();
+	Scope VScope;
 };
