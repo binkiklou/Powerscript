@@ -8,8 +8,7 @@
 class Loop
 {
 public:
-	int DecScope; // The scope where the function has been declared
-	int DefScope; // The new scope that has been created
+	Scope Def_Scope; // Scope inside
 	void Run();
 	std::vector<Parser::Statement> Statements;
 };

@@ -13,8 +13,8 @@ namespace Parser
 	{
 	public:
 		int Type;
-		Scope Def_Scope; // The scope where the statement has been defined
-		Scope Dec_Scope; //  If it's a if or function statement it is the new scope
+		Scope Dec_Scope; // The scope where the statement has been declared
+		Scope Def_Scope; //  If it's a if or function statement it is the new scope
 		bool Executed;
 		std::string Stat_Name;
 		std::vector<Argument> Arguments;

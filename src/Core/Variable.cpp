@@ -50,6 +50,9 @@ namespace Powerscript
 			CVariable.Name = Stat.Stat_Name;
 			CVariable.CValue.Undefined = true;
 			this->ValueTable.push_back(CVariable);
+
+			this->ScopeList.push_back(Stat.Dec_Scope);
+			Stat.Dec_Scope.id = static_cast<int>(this->ScopeList.size()) - 1;
 		}
 	}
 	void Env::Define_Variable(Parser::Statement Stat)

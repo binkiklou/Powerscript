@@ -16,18 +16,22 @@ namespace Powerscript
 		void Add(std::string);
 		void Analyze();
 
-		void Define_Variable(Parser::Statement);
-		void Declare_Variable(Parser::Statement);
-		bool Variable_Exist(std::string);
 		int Find_Variable(std::string);
 
+		void Define_Variable(Parser::Statement);
+		void Declare_Variable(Parser::Statement);
 		void Call_Function(std::string,std::vector<Argument>);
-	//	Variable& Find_Variable(std::string);
+
+		bool Variable_Exist(std::string);
+		bool Scope_Reach(Scope);
+
+		Scope Scope_By_Id(int);
 	private:
 		std::vector<std::string> WordList;
 		std::vector<Parser::Statement> StatementList;
 		std::vector<Variable> ValueTable;
 		std::vector<Function> FunctionTable;
+		std::vector<Scope> ScopeList; // Parent
 	};
 	static bool Debug_Mode;
 }

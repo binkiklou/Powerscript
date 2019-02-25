@@ -1,8 +1,9 @@
 #pragma once
-#include "Scope.h"
 
 #include <string>
 #include <vector>
+
+#include "Scope.h"
 
 class Value
 {
@@ -23,8 +24,7 @@ public:
 class Variable
 {
 public:
-//	Variable();
 	std::string Name;
 	Value CValue; // Current Value
-	Scope VScope;
+	Scope VScope; // Variable Scope
 };

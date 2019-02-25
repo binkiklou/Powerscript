@@ -114,7 +114,7 @@ namespace Powerscript
 			}
 			if (Word.compare("global") == 0)
 			{
-				std::string Dec_Word; // Declaration Word
+				std::string Def_Word; // Definition  Word
 				std::string Name;
 				CStatement.Def_Scope = CScope;
 
@@ -122,7 +122,7 @@ namespace Powerscript
 
 				try
 				{
-					Dec_Word = this->WordList.at(WPos + 2); // Potential declaration keyword
+					Def_Word = this->WordList.at(WPos + 2); // Potential declaration keyword
 				}
 				catch(std::out_of_range)
 				{
@@ -137,15 +137,16 @@ namespace Powerscript
 					Log::Debug("Error handled, name out of range");
 				}
 
-			/*	if (Dec_Word.compare("=") == 0)
+			/*	if (Def_Word.compare("=") == 0)
 				{
 
 				}
-				else*/ if (Dec_Word.compare("=") != 0) // Statemenet is dec
+				else*/ 
+				if (Def_Word.compare("=") != 0) // Statemenet is dec
 				{
 					CStatement.Type = 1;
-				//	std::cout << "Name is " << Name << std::endl;
 					CStatement.Stat_Name = Name;
+					CStatement.Dec_Scope = CScope;
 					this->StatementList.push_back(CStatement);
 				}
 			}
