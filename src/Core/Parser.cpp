@@ -54,7 +54,7 @@ namespace Parser
 	STATEMENT DEFINITION
 	====================
 	*/
-	
+
 	/*void Statement::Clear()
 	{
 		int NoInt;
@@ -124,7 +124,6 @@ namespace Powerscript
 				{
 					Log::Debug("Error handled, declaration word out of range");
 				}
-
 				try
 				{
 					Name = this->WordList.at(WPos + 1);
@@ -227,7 +226,7 @@ namespace Powerscript
 					{
 						VInt = false;
 					}
-					
+
 					if (arg.CValue.GetType() == 2)
 					{
 						VBool = true;
