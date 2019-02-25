@@ -1,6 +1,9 @@
 # Powerscript
 Ok so this is my **custom language** and I like it. I didn't realize it but it looks like python, and I didn't know python had some of theses keywords.
 
+The first version was made on 2019/02/13
+The first github version was made on 2019/02/23
+
 # Build and installation
 > Currently no build tools are working 
 
