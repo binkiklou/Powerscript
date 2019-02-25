@@ -1,6 +1,6 @@
-#include "Log.h"
-#include "OS.h"
-#include "Powerscript.h"
+#include "../Console/Log.h"
+#include "../Core/OS.h"
+#include "../Core/Powerscript.h"
 
 #include <iostream>
 

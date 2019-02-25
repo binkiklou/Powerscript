@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Variable.h"
+#include "../Core/Variable.h"
 
 #include <string>
 #include <vector>

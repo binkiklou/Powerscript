@@ -1,5 +1,5 @@
-#include "Command.h"
-#include "OS.h"
+#include "../Interface/Command.h"
+#include "../Core/OS.h"
 
 #include <iostream>
 

@@ -1,6 +1,6 @@
-#include "Parser.h"
-#include "Powerscript.h"
-#include "Log.h"
+#include "../Core/Parser.h"
+#include "../Core/Powerscript.h"
+#include "../Console/Log.h"
 
 #include <iostream>
 

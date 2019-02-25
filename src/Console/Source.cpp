@@ -1,7 +1,7 @@
-#include "Powerscript.h"
-#include "Command.h"
-#include "OS.h"
-#include "Log.h"
+#include "../Core/Powerscript.h"
+#include "../Interface/Command.h"
+#include "../Core/OS.h"
+#include "../Console/Log.h"
 
 #include <iostream>
 

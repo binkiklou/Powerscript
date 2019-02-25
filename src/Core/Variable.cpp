@@ -1,6 +1,6 @@
 #include "Variable.h"
 #include "Powerscript.h"
-#include "Log.h"
+#include "../Console/Log.h"
 
 #include <iostream>
 
