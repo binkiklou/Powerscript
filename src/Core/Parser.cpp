@@ -273,14 +273,19 @@ namespace Powerscript
 				}
 				catch (std::out_of_range)
 				{
-					//	std::cout << "Handled: Out of range word" << std::endl;
+					Log::Debug("Handled Exception: Declaration word, would be out of range");
 				}
 
 				if (D_Word.compare("function") == 0)
 				{
 					if (!isString)
 					{
-
+						//..
+						std::cout << "Function" << std::endl;
+					}
+					else
+					{
+						// Wtf why would anyone do that
 					}
 				}
 				else if(!isString)

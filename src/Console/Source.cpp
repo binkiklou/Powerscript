@@ -9,7 +9,7 @@
 int main()
 {
 	std::cout << "PowerScript Interpreter Version "<< PSVersion << std::endl;
-	std::cout << "Build of " << __TIMESTAMP__ << " for " << OsString << std::endl;
+	std::cout << "Build of " << __DATE__ << " for " << OsString << std::endl;
 
 	Powerscript::Env Environement;
 	
