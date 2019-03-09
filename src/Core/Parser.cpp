@@ -90,6 +90,9 @@ namespace Powerscript
 		Fix.append(1, '"');
 
 		bool isString = false;
+		bool isFunc = false;
+
+		Function CFunc; // Current Function
 
 		for (std::vector<std::string>::iterator w = this->WordList.begin(); w != this->WordList.end(); ++w)
 		{
@@ -278,10 +281,21 @@ namespace Powerscript
 
 				if (D_Word.compare("function") == 0)
 				{
+					std::string FName;
+
+					try
+					{
+						FName = this->WordList.at(WPos + 1);
+					}
+					catch (std::out_of_range)
+					{
+						Log::Debug("Wtf name doesn't exist");
+					} 
+
 					if (!isString)
 					{
-						//..
-						std::cout << "Function" << std::endl;
+						CFunc.Name = FName;
+						isFunc = true;
 					}
 					else
 					{
