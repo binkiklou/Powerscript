@@ -8,7 +8,6 @@
 namespace Parser
 {
 	std::vector<std::string> Disjoint(std::string);
-//	void Analyze(std::vector<std::string>);
 	class Statement 
 	{
 	public:

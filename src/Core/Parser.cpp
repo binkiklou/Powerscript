@@ -171,18 +171,11 @@ namespace Powerscript
 					std::cout << "Code exit" << std::endl;
 					break;
 				}
-
-			//	if (NextWord.compare("=") == 0) // Might be a if statement
-			//	{
-			//	}
-			//	else
-			//	{
 					int LPos = 0;
 					bool VString = false; // Value String
 					bool VInt = false;
 					bool VBool = false;
 					bool VName = false;
-//					std::string CValue; // Current Value
 
 					Argument arg;
 
@@ -191,7 +184,6 @@ namespace Powerscript
 						LPos++;
 						if (LPos >= WPos)
 						{
-							//	std::cout << "Words are " << word << std::endl;
 							if (VString == true)
 							{
 								Log::Debug("Argument is String");
@@ -358,7 +350,6 @@ namespace Powerscript
 					}
 
 					CStatement.Arguments.push_back(Carg);
-				//	std::cout << "CArg value is " << Carg.CValue.PValue << std::endl;
 
 					this->StatementList.push_back(CStatement);
 				}

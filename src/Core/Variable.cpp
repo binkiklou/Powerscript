@@ -85,7 +85,6 @@ namespace Powerscript
 			Log::Error("Variable doesn't exist");
 		}
 
- 	//	std::cout << "Var is " << CVariable.Name << " and value is " << CVariable.Value << std::endl;
 	}
 	bool Env::Variable_Exist(std::string Name)
 	{
@@ -98,7 +97,6 @@ namespace Powerscript
 			Var_Name = Var.Name;
 			if (Var_Name.compare(Name) == 0)
 			{
-			//	std::cout << "The variable exists" << std::endl;
 				Found = true;
 			}
 		}
